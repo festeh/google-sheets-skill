@@ -1,0 +1,5 @@
+[project]
+name = "google-sheets-skill"
+version = "1.0.0"
+requires-python = ">=3.10"
+dependencies = ["gspread>=6.0.0"]
