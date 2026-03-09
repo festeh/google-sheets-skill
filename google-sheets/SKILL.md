@@ -77,6 +77,38 @@ uv runwrite_sheet.py append-row "SPREADSHEET_ID" "Sheet1" '["value1","value2","v
 uv runwrite_sheet.py clear-range "SPREADSHEET_ID" "Sheet1" "A1:C10"
 ```
 
+## Creating & Managing Spreadsheets
+
+### Create a new spreadsheet
+```bash
+uv runcreate_sheet.py create "My Spreadsheet"
+```
+
+### Add a worksheet (tab) to an existing spreadsheet
+```bash
+uv runcreate_sheet.py add-worksheet "SPREADSHEET_ID" "NewTab"
+```
+
+With custom size:
+```bash
+uv runcreate_sheet.py add-worksheet "SPREADSHEET_ID" "NewTab" 500 20
+```
+
+### Delete a worksheet
+```bash
+uv runcreate_sheet.py delete-worksheet "SPREADSHEET_ID" "SheetName"
+```
+
+### Share a spreadsheet
+```bash
+uv runcreate_sheet.py share "SPREADSHEET_ID" "user@example.com"
+```
+
+With read-only access:
+```bash
+uv runcreate_sheet.py share "SPREADSHEET_ID" "user@example.com" reader
+```
+
 ## Output Format
 
 All scripts output JSON:
